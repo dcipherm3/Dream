@@ -1,0 +1,67 @@
+/* Load multiple font weights in a single @font-face block */
+@font-face {
+    font-family: "Dongle";
+    src: url("../fonts/Dongle-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Dongle";
+    src: url("../fonts/Dongle-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Dongle";
+    src: url("../fonts/Dongle-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Pacifico";
+    src: url("../fonts/Pacifico-Regular.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+  /* Global variables for easy font usage */
+  :root {
+    --font-dongle: "Dongle", sans-serif;
+    --font-pacifico: "Pacifico", sans-serif;
+    --secondary-color: white;
+    --tertiary-color: black;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: rgb(50, 44, 225);
+    margin: 2rem auto;
+  }
+  
+  .header-title h1 {
+    font-family: var(--font-pacifico);
+    color: var(--secondary-color);
+  }
+  
+  /* Navigation items */
+  .header-items ul li {
+    margin: auto 30px;
+    color: var(--secondary-color);
+    font-family: var(--font-dongle);
+    font-size: x-large;
+    font-weight: normal;
+
+  }
+  
+  /* Register button */
+  .header-items ul li a[href='#register'] {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    padding: 8px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+  }
+  

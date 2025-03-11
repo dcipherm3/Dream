@@ -1,22 +1,15 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
-import './assets/styles/App.css'
-import './components/header.jsx'
-import Header from './components/header'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home"; // ✅ Import the Home component
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div>
-      <Header />
-      <div>
-        <p className='text-2xl'>
-          SIGMA SIGMA BOI SIGMA BOI SIGMA BOI
-        </p>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
