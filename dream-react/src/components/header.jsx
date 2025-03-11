@@ -3,8 +3,8 @@ import '../assets/styles/App.css';
 
 function Header(){
     return (
-        <header className="absolute top-0 left-0 pt-12 px-10 w-full bg-blue-500 flex justify-between items-center">
-            <div className="header-title pl-6">
+        <header className="absolute top-0 left-0 w-full flex justify-between items-center">
+            <div className="header-title">
                 <h1>Dream</h1>
             </div>
             <div className="header-items">

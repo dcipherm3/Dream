@@ -37,12 +37,15 @@
   /* Header styles */
   header {
     background-color: transparent;
+    padding: 3rem 2rem;
     z-index: 999;
   }
   
   .header-title h1 {
     font-family: var(--font-pacifico);
     color: var(--secondary-color);
+    padding-left: 1.5rem;
+    font-size: xx-large;
   }
   
   /* Navigation items */
@@ -51,7 +54,7 @@
     color: var(--secondary-color);
     font-family: var(--font-dongle);
     font-size: xx-large;
-    font-weight: normal;
+    font-weight: 300;
 
   }
   
@@ -62,8 +65,74 @@
     background-color: var(--secondary-color);
     padding: 1px 30px;
     border-radius: 7px;
-    font-weight: bold;
+    font-weight: 500;
   }
 
-  
-  
+.software-form__wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 550px;
+    background-color: rgba(134, 133, 133, 0.8); /* Black background with 50% opacity */
+}
+
+.softwaredownload-container{
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 11px;
+    padding: 4rem 7rem;
+}
+.softwaredownload-container h1{
+    color: white;
+    font-family: var(--font-pacifico);
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.softwaredownload-container p{
+    color: white;
+    font-family: var(--font-dongle);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.softwaredownload-container a {
+    font-family: var(--font-dongle);
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 16px 50px;
+    border-radius: 100px;
+    font-weight: 300;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.softwaredownload-container a:hover {
+    color: white;
+}
+
+.softwaredownload-container a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: white;
+    z-index: -1;
+    transition: height 0.4s ease;
+}
+
+.softwaredownload-container a:hover::before {
+    height: 100%;
+}
+
+
+
