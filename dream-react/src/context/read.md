@@ -1,0 +1,1 @@
+# Context API for global state management
