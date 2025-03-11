@@ -36,8 +36,8 @@
   
   /* Header styles */
   header {
-    background-color: rgb(50, 44, 225);
-    margin: 2rem auto;
+    background-color: transparent;
+    z-index: 999;
   }
   
   .header-title h1 {
@@ -48,10 +48,9 @@
   /* Navigation items */
   .header-items ul li {
     margin: auto 30px;
-    margin-top: 30px;
     color: var(--secondary-color);
     font-family: var(--font-dongle);
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: normal;
 
   }
@@ -61,7 +60,7 @@
     text-decoration: none;
     color: var(--tertiary-color);
     background-color: var(--secondary-color);
-    padding: 8px 30px;
+    padding: 1px 30px;
     border-radius: 7px;
     font-weight: bold;
   }
