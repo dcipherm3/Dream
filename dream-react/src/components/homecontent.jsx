@@ -16,7 +16,7 @@ function Homecontent() {
                     </a>
                 </div>
 
-                <div className="auth-container flex-col w-140 h-140 justify-center items-center bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
+                <div className="auth-container flex flex-col w-140 h-140 justify-center items-center bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
                     <h1 className="text-2xl font-bold">Login</h1>
 
                     <form className="loginForm flex flex-col justify-center items-center w-100 pb-10 gap-4">
