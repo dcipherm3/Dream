@@ -77,10 +77,10 @@
 }
 
 .softwaredownload-container{
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.4);
     border: 2px solid rgb(165, 165, 165);
     border-radius: 11px;
-    padding: 4rem 10rem;
+    padding: 4rem 7rem;
     margin: auto 2rem;
 }
 .softwaredownload-container h1{
@@ -137,73 +137,27 @@
 
 /*Authentication container*/
 .auth-container{
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 11px;
   padding: 5rem 4rem;
   overflow: hidden;
   border: 2px solid rgb(165, 165, 165);
 }
 
-.auth-container h1{
-  color: white;
-  font-family: var(--font-dongle);
-  font-size: 4rem;
-  text-align: center;
-  margin-top: -50px;
-  margin-bottom: 50px;
-
-}
-
-.auth-container a.submit-login {
-  font-family: var(--font-dongle);
-  font-size: 2rem;
-  text-decoration: none;
-  color: white;
-  background-color: transparent;
-  border: 2px solid white;
-  padding: 10px 80px;
-  width: 10%;
-  border-radius: 100px;
-  position: relative;
-  overflow: hidden;
-}
-
-.auth-container a.submit-login:hover {
-  color: white;
-}
-
-.auth-container a.submit-login::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0;
-  background-color: white;
-  z-index: -1;
-  transition: height 0.4s ease;
-}
-
-.auth-container a.submit-login:hover::before {
-  height: 100%;
-}
-
-.auth-container a.forgot-password,a.register {
-  font-size: 1rem;  /* Adjust to default size */
-  text-decoration: underline; /* Add underline if needed */
-  color: #3b82f6; /* Tailwind blue-500 */
-  padding-bottom: 10px;
-}
 
 
-.auth-container a.forgot-password,a.register:hover {
-  color: #1d4ed8; 
-}
 
 .loginForm {
   width: 100%;
   font-family: var(--font-dongle);
 }
+
+.loginForm h1{
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    margin: 10px auto;
+  }
 
 .loginForm input:not([type="checkbox"]) {
   background: #FFFFFF;
@@ -211,10 +165,18 @@
   margin: 15px;
   border-radius: 10px;
   border: none;
+  outline: none;
   font-size: 1.5rem;
   font-weight: 500;
   color: black;
+  box-shadow: none;
+  transition: box-shadow 0.2s ease-in-out;
 }
+
+.loginForm input:not([type="checkbox"]):focus {
+  box-shadow: 0 0 0 3px rgba(78, 56, 239, 0.8);
+}
+
 
 .authIcons {
   position: absolute;
@@ -231,6 +193,77 @@
 .remForgor {
   padding-inline: 20px;
 }
+
+.remForgor input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.remForgor input[type="checkbox"]:hover {
+    transform: scale(1.2);
+}
+
+.remForgor label{
+    font-size: 1.2rem;
+    color: white;
+    padding-left: 10px;
+}
+
+
+.loginForm a.submit-login {
+    font-family: var(--font-dongle);
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 80px;
+    width: 10%;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .loginForm a.submit-login:hover {
+    color: white;
+  }
+  
+  .loginForm a.submit-login::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: white;
+    z-index: -1;
+    transition: height 0.4s ease;
+  }
+  
+  .loginForm a.submit-login:hover::before {
+    height: 100%;
+  }
+
+  .loginForm .forgot-password, .redirectregister a {
+    font-size: 1.4rem;  /* Adjust to default size */
+    text-decoration: underline; /* Add underline if needed */
+    color: rgba(132, 116, 249, 1); 
+    padding-bottom: 10px;
+  }
+  
+  
+  .loginForm .forgot-password:hover, .redirectregister a:hover {
+    color: rgba(132, 116, 249, 0.8); 
+  }
+  
+  .loginForm .redirectregister span{
+    color: white;
+    font-size: 1.4rem;
+  }
+
+
+
 .form-container{
     display: none;
     background: rgba(0, 0, 0, 0.7);   

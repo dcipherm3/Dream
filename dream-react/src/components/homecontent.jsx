@@ -1,6 +1,6 @@
 import VideoComponent from "../components/VideoComponent";
 import emailIcon from "../assets/images/icons/email.png";
-import passIcon from "../assets/images/icons/showpassword.png";
+import hidepassIcon from "../assets/images/icons/hidepassword.png";
 
 function Homecontent() {
     return (
@@ -11,7 +11,7 @@ function Homecontent() {
 
             <div className="software-form__wrapper absolute flex justify-center items-center space-x-14">
                 <div className="softwaredownload-container flex flex-col justify-center items-center p-6 bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
-                    <h1 className="text-2xl font-bold">Dream</h1>
+                    <h1>Dream</h1>
                     <p>A software that touches human's dreams</p>
                     <a href="#downloadsoftware" className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                         Make it happen
@@ -21,33 +21,20 @@ function Homecontent() {
 
                 {/* Zaf Login */}
                 <div className="auth-container flex flex-col w-140 h-140 justify-center items-center bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
-                    <h1 className="text-2xl font-bold">Login</h1>
-
                     <form className="loginForm flex flex-col justify-center">
-                        {/* Email Input with Emoji */}
+                        <h1>Login</h1>
                         <div className="grid grid-cols-1 relative">
                             <span className="authIcons">
                                 <img src={emailIcon} alt="Email Icon"/>
                             </span>
-                            <input 
-                                type="email" 
-                                placeholder="Email" 
-                                required 
-                            />
+                            <input type="email" placeholder="Email" required/>
                         </div>
-
-                        <div className="h-2"></div>
-
-             
+                        
                         <div className="grid grid-cols-1 relative w-full">
                             <span className="authIcons">
-                                <img src={passIcon} alt="Password Icon"/>
+                                <img src={hidepassIcon} alt="Password Icon"/>
                             </span>
-                            <input 
-                                type="password" 
-                                placeholder="Password" 
-                                required 
-                            />
+                            <input type="password" placeholder="Password" required/>
                         </div>
                         
                         <div className="remForgor grid grid-cols-2 justify-center items-center"> 
@@ -58,24 +45,16 @@ function Homecontent() {
                             </label>
                             </div>
                             <div className="justify-self-end">
-                            <a href="#forgot-password" className="forgot-password text-sm hover:underline">
-                                Forgot Password?
-                            </a>
+                            <a href="#forgot-password" className="forgot-password">Forgot Password?</a>
                             </div>
                         </div>
 
-                        
-                        <a href="#submit-login" className="submit-login text-white rounded-lg flex justify-center items-center self-center">
-                            Login
-                        </a>
-                    </form>
+                        <a href="#submit-login" className="submit-login mt-3 text-white rounded-lg flex justify-center items-center self-center">Login</a>
 
-                    <div className="flex justify-center items-center -mb-10">
-                        <span>Not registered yet?</span>
-                        <a href="#register" className="register text-blue-500 text-sm mt-2 self-end hover:underline">
-                                Register?
-                        </a>
-                    </div>
+                        <div className="redirectregister flex justify-center items-center mt-3">
+                        <span>Not registered yet? <a href="#register" className="text-blue-500 text-sm mt-2 self-end hover:underline">Register?</a> </span>
+                        </div>
+                    </form>
                 </div>
 
                 
