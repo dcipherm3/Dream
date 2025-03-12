@@ -16,6 +16,8 @@ function Homecontent() {
                     </a>
                 </div>
 
+
+                {/* Zaf Login */}
                 <div className="auth-container flex flex-col w-140 h-140 justify-center items-center bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
                     <h1 className="text-2xl font-bold">Login</h1>
 
@@ -68,6 +70,9 @@ function Homecontent() {
                         </a>
                     </div>
                 </div>
+
+                
+                {/* Hiqal Register */}
                 <div className="form-container">
                     <div className="formcontent__wrapper">
                         <div className="register-form flex flex-col justify-center">
