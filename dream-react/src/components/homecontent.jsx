@@ -1,4 +1,6 @@
 import VideoComponent from "../components/VideoComponent";
+import emailIcon from "../assets/images/icons/email.png";
+import passIcon from "../assets/images/icons/showpassword.png";
 
 function Homecontent() {
     return (
@@ -21,40 +23,45 @@ function Homecontent() {
                 <div className="auth-container flex flex-col w-140 h-140 justify-center items-center bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
                     <h1 className="text-2xl font-bold">Login</h1>
 
-                    <form className="loginForm flex flex-col justify-center items-center w-100 pb-10 gap-4">
+                    <form className="loginForm flex flex-col justify-center">
                         {/* Email Input with Emoji */}
-                        <div className="relative w-full">
-                            <span className="absolute left-3 top-1/2 transform -translate-y-1/2">📧</span>
+                        <div className="grid grid-cols-1 relative">
+                            <span className="authIcons">
+                                <img src={emailIcon} alt="Email Icon"/>
+                            </span>
                             <input 
                                 type="email" 
                                 placeholder="Email" 
-                                className="w-full p-4 pl-10 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-black"
                                 required 
                             />
                         </div>
 
                         <div className="h-2"></div>
 
-                        {/* Password Input with Emoji */}
-                        <div className="relative w-full">
-                            <span className="absolute left-3 top-1/2 transform -translate-y-1/2">🔑</span>
+             
+                        <div className="grid grid-cols-1 relative w-full">
+                            <span className="authIcons">
+                                <img src={passIcon} alt="Password Icon"/>
+                            </span>
                             <input 
                                 type="password" 
                                 placeholder="Password" 
-                                className="w-full p-4 pl-10 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-black"
                                 required 
                             />
                         </div>
                         
-                        <div className="flex justify-center items-center gap-33">
-                            <label className="flex items-center space-x-2 text-white">
-                                <input type="checkbox" className="w-4 h-4 accent-blue-600" />
-                                <span>Remember Me</span>
+                        <div className="remForgor grid grid-cols-2 justify-center items-center"> 
+                            <div className="justify-self-start">
+                            <label className="flex items-center text-white">
+                                <input type="checkbox" className="checkbox-remember mb-1 accent-blue-600" />
+                                <span className="pl-2">Remember Me</span>
                             </label>
-
-                            <a href="#forgot-password" className="forgot-password text-sm mt-2 self-end hover:underline">
+                            </div>
+                            <div className="justify-self-end">
+                            <a href="#forgot-password" className="forgot-password text-sm hover:underline">
                                 Forgot Password?
                             </a>
+                            </div>
                         </div>
 
                         

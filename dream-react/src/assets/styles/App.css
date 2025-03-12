@@ -141,6 +141,7 @@
   border-radius: 11px;
   padding: 5rem 4rem;
   overflow: hidden;
+  border: 2px solid rgb(165, 165, 165);
 }
 
 .auth-container h1{
@@ -199,9 +200,40 @@
   color: #1d4ed8; 
 }
 
+.loginForm {
+  width: 100%;
+  font-family: var(--font-dongle);
+}
 
+.loginForm input:not([type="checkbox"]) {
+  background: #FFFFFF;
+  padding: 1rem 3rem;
+  margin: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+}
+
+.authIcons {
+  position: absolute;
+  left: 1.5rem;
+  top: 0.125rem;
+  transform: translateY(2.2rem);
+}
+
+.loginForm img {
+  width: 20px;
+  height: 20px;
+}
+
+.remForgor {
+  padding-inline: 20px;
+}
 .form-container{
-    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    background: rgba(0, 0, 0, 0.7);   
     border-radius: 11px;
     padding: 2rem;
     margin: auto 2rem;
@@ -209,6 +241,7 @@
 }
 
 .form-container .register-form{
+
     color: white;
     font-family: var(--font-dongle);
 
