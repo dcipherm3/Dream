@@ -74,13 +74,14 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: 550px;
-    background-color: rgba(134, 133, 133, 0.8); /* Black background with 50% opacity */
 }
 
 .softwaredownload-container{
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgb(165, 165, 165);
     border-radius: 11px;
-    padding: 4rem 7rem;
+    padding: 4rem 10rem;
+    margin: auto 2rem;
 }
 .softwaredownload-container h1{
     color: white;
@@ -88,8 +89,8 @@
     font-size: 6rem;
     text-align: center;
     margin-top: 10px;
-
 }
+
 .softwaredownload-container p{
     color: white;
     font-family: var(--font-dongle);
@@ -133,6 +134,71 @@
 .softwaredownload-container a:hover::before {
     height: 100%;
 }
+
+
+.form-container{
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 11px;
+    padding: 2rem;
+    margin: auto 2rem;
+    border: 2px solid rgb(165, 165, 165);
+}
+
+.form-container .register-form{
+    color: white;
+    font-family: var(--font-dongle);
+
+}
+
+ .register-form h1{
+    color: white;
+    font-family: var(--font-dongle);
+    font-size: 5rem;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.register-form input{
+    background: #FFFFFF;
+    padding: 0.8rem 3rem;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: black;
+}
+
+.register-form button{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1rem 5rem;
+    margin: 15px;
+    border-radius: 31.5px;
+    border: none;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.register-form button:hover{
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.register-form span{
+    font-size: 1.3rem;
+}
+
+.register-form a{
+    text-decoration: underline;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+
+
+
 
 
 
