@@ -135,6 +135,70 @@
     height: 100%;
 }
 
+/*Authentication container*/
+.auth-container{
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 11px;
+  padding: 5rem 4rem;
+  overflow: hidden;
+}
+
+.auth-container h1{
+  color: white;
+  font-family: var(--font-dongle);
+  font-size: 4rem;
+  text-align: center;
+  margin-top: -50px;
+  margin-bottom: 50px;
+
+}
+
+.auth-container a.submit-login {
+  font-family: var(--font-dongle);
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 10px 80px;
+  width: 10%;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-container a.submit-login:hover {
+  color: white;
+}
+
+.auth-container a.submit-login::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: white;
+  z-index: -1;
+  transition: height 0.4s ease;
+}
+
+.auth-container a.submit-login:hover::before {
+  height: 100%;
+}
+
+.auth-container a.forgot-password,a.register {
+  font-size: 1rem;  /* Adjust to default size */
+  text-decoration: underline; /* Add underline if needed */
+  color: #3b82f6; /* Tailwind blue-500 */
+  padding-bottom: 10px;
+}
+
+
+.auth-container a.forgot-password,a.register:hover {
+  color: #1d4ed8; 
+}
+
 
 .form-container{
     background: rgba(0, 0, 0, 0.7);
