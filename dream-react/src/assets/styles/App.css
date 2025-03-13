@@ -407,45 +407,6 @@
     
 }
 
-.feature .card{
-    background-color: white;
-    border-radius: 7px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.feature .card .cardimg{
-    object-fit: contain;
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    border-radius: 3px;
-}
-
-.feature .card .cardimg img{
-    width: 100%;
-    height: 100%;
-}
-
-.feature .card .cardcontent{
-    width: 100%;
-    padding: 10px;
-    margin: 5px auto 20px auto;
-}
-
-
-.feature .card .cardcontent h1{
-    font-size: 2.4rem;
-    color: black;
-}
-
-.feature .card .cardcontent p{
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: black;
-    
-    
-}
 
 
 
