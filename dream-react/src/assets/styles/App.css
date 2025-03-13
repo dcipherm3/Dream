@@ -63,7 +63,7 @@
     text-decoration: none;
     color: var(--tertiary-color);
     background-color: var(--secondary-color);
-    padding: 1px 30px;
+    padding: 5px 30px 1px;
     border-radius: 7px;
     font-weight: 500;
   }
