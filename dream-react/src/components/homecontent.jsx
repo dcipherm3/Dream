@@ -1,8 +1,14 @@
-import VideoComponent from "../components/VideoComponent";
+import { useState } from "react";
+import eyeOpened from "../assets/images/icons/showpassword.png";
+import eyeClosed from "../assets/images/icons/hidepassword.png";
 import emailIcon from "../assets/images/icons/email.png";
-import hidepassIcon from "../assets/images/icons/hidepassword.png";
+import VideoComponent from "../components/VideoComponent";
+
 
 function Homecontent() {
+
+    const [isVisible, setIsVisible] = useState(false);
+
     return (
         <section className="absolute top-0 left-0 right-0 bottom-0">
             
@@ -16,7 +22,7 @@ function Homecontent() {
                 <div className="softwaredownload-container flex flex-col justify-center items-center p-6 backdrop-blur-lg shadow-lg">
                     <h1>Dream</h1>
                     <p>A software that touches human's dreams</p>
-                    <a href="#downloadsoftware" className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                    <a href="#downloadsoftware" className=" text-white rounded-lg hover:bg-blue-700 transition">
                         Make it happen
                     </a> 
                 </div>
@@ -35,9 +41,14 @@ function Homecontent() {
                         
                         <div className="grid grid-cols-1 relative w-full">
                             <span className="authIcons">
-                                <img src={hidepassIcon} alt="Password Icon"/>
+                                <img 
+                                    src={isVisible ? eyeOpened : eyeClosed} 
+                                    alt="Toggle Password" 
+                                    className="hover:cursor-pointer"
+                                    onClick={() => setIsVisible(!isVisible)}
+                                />
                             </span>
-                            <input type="password" placeholder="Password" required/>
+                            <input type={isVisible ? "text" : "password"} placeholder="Password" required/>
                         </div>
                         
                         <div className="remForgor grid grid-cols-2 justify-center items-center"> 
