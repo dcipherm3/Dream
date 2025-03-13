@@ -109,14 +109,9 @@
     border: 2px solid white;
     padding: 16px 50px;
     border-radius: 100px;
-    font-weight: 300;
     margin-top: 10px;
     position: relative;
     overflow: hidden;
-}
-
-.softwaredownload-container a:hover {
-    color: white;
 }
 
 .softwaredownload-container a::before {
@@ -227,10 +222,6 @@
     overflow: hidden;
   }
   
-  .loginForm a.submit-login:hover {
-    color: white;
-  }
-  
   .loginForm a.submit-login::before {
     content: "";
     position: absolute;
@@ -255,8 +246,8 @@
   }
   
   
-  .loginForm .forgot-password:hover, .redirectregister a:hover {
-    color: rgba(132, 116, 249, 0.8); 
+  .loginForm .forgot-password:hover, .redirectregister a:hover, .loginForm .submit-login:hover {
+    color: #646cff; 
   }
   
   .loginForm .redirectregister span{

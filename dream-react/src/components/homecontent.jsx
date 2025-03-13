@@ -88,7 +88,7 @@ function Homecontent() {
             </div>
 
             <div className="h-36"></div> {/* Spacer */}
-            
+
         </section>
     );
 }
