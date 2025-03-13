@@ -26,13 +26,23 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "Delicious Handrawn";
+    src: url("../fonts/DeliciousHandrawn-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
   /* Global variables for easy font usage */
-  :root {
+:root {
     --font-dongle: "Dongle", sans-serif;
     --font-pacifico: "Pacifico", sans-serif;
+    --font-delicious-handrawn: "Delicious Handrawn", sans-serif;
     --secondary-color: white;
     --tertiary-color: black;
-  }
+}
   
   /* Header styles */
   header {
@@ -325,6 +335,118 @@
     color: white;
     transition: color 0.3s ease;
 }
+
+
+/* Website-secondcontent */
+
+.second-section{
+    background:linear-gradient(180deg, #406398 0%, #4479C7 100%);
+}
+
+.product__wrapper{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 500px;
+    padding-inline: 4rem;
+   
+}
+
+.product-introduction{
+    font-family: var(--font-dongle);
+    width: 70%;
+
+}
+
+.product-introduction h1{
+    color: white;
+    font-size: 4rem;
+    margin: 5px auto;
+}
+
+.product-introduction p{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 5px auto 30px auto;
+}
+
+.product-introduction .quote{
+    font-family: var(--font-delicious-handrawn);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.product-introduction .operatingsystems{
+    margin: 40px auto;
+}
+
+.product-introduction .operatingsystems img{
+    cursor: pointer;
+}
+
+.features-offered{
+    font-family: var(--font-dongle);
+    gap: 30px;
+  
+
+}
+
+.features-offered .feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature .what,.we, .offer{
+    color: white;
+    font-size: 4rem;
+    margin: 4rem auto;
+    
+}
+
+.feature .card{
+    background-color: white;
+    border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.feature .card .cardimg{
+    object-fit: contain;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    border-radius: 3px;
+}
+
+.feature .card .cardimg img{
+    width: 100%;
+    height: 100%;
+}
+
+.feature .card .cardcontent{
+    width: 100%;
+    padding: 10px;
+    margin: 5px auto 20px auto;
+}
+
+
+.feature .card .cardcontent h1{
+    font-size: 2.4rem;
+    color: black;
+}
+
+.feature .card .cardcontent p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: black;
+    
+    
+}
+
 
 
 
