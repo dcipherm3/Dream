@@ -4,23 +4,26 @@ import hidepassIcon from "../assets/images/icons/hidepassword.png";
 
 function Homecontent() {
     return (
-        <section className="first-section absolute top-0 left-0 right-0 bottom-0">
+        <section className="absolute top-0 left-0 right-0 bottom-0">
+            
             <div className="absolute top-0 left-0 right-0 bottom-0">
                 <VideoComponent />
             </div>
 
-            <div className="software-form__wrapper absolute flex justify-center items-center space-x-14">
-                <div className="softwaredownload-container flex flex-col justify-center items-center p-6 bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
+            <div className="h-36"></div> {/* Spacer */}
+
+            <div className="flex justify-around items-center py-24 px-36">
+                <div className="softwaredownload-container flex flex-col justify-center items-center p-6 backdrop-blur-lg shadow-lg">
                     <h1>Dream</h1>
                     <p>A software that touches human's dreams</p>
                     <a href="#downloadsoftware" className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                         Make it happen
-                    </a>
+                    </a> 
                 </div>
 
 
                 {/* Zaf Login */}
-                <div className="auth-container flex flex-col w-140 h-140 justify-center items-center bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
+                <div className="auth-container flex flex-col w-140 h-140 justify-center items-center backdrop-blur-lg shadow-lg">
                     <form className="loginForm flex flex-col justify-center">
                         <h1>Login</h1>
                         <div className="grid grid-cols-1 relative">
@@ -81,7 +84,11 @@ function Homecontent() {
                         
                     </div>
                 </div>
+
             </div>
+
+            <div className="h-36"></div> {/* Spacer */}
+            
         </section>
     );
 }

@@ -161,12 +161,12 @@
 
 .loginForm input:not([type="checkbox"]) {
   background: #FFFFFF;
-  padding: 1rem 3rem;
+  padding: 1rem 4rem;
   margin: 15px;
   border-radius: 10px;
   border: none;
   outline: none;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 500;
   color: black;
   box-shadow: none;
@@ -188,6 +188,8 @@
 .loginForm img {
   width: 20px;
   height: 20px;
+  margin-left: 16px;
+  margin-top: .1rem;
 }
 
 .remForgor {
