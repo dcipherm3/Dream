@@ -1,6 +1,7 @@
 
 // Components
 import VideoComponent from "../components/VideoComponent";
+import { useState } from "react";
 // Assets
 import emailIcon from "../assets/images/icons/email.png";
 import hidepassIcon from "../assets/images/icons/hidepassword.png";
@@ -10,29 +11,33 @@ import linuxIconOS from "../assets/images/operatingsystem/linuxOS.png";
 import cardimg1 from "../assets/images/cardimg/dreamtree.png";
 import cardimg2 from "../assets/images/cardimg/rewards.png";
 import cardimg3 from "../assets/images/cardimg/community.jpg";
+import moonIllustration from "../assets/images/undraw_to-the-moon.svg";
+import launchIllustration from "../assets/images/to-the-stars.svg";
 
 function Homecontent() {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
     return (
         <div>
-        <section className="hidden first-section absolute top-0 left-0 right-0 bottom-0">
-            <div className="absolute top-0 left-0 right-0 bottom-0">
-                <VideoComponent />
-            </div>
-
-            <div className="software-form__wrapper absolute flex justify-center items-center space-x-14">
-                <div className="softwaredownload-container flex flex-col justify-center items-center p-6 bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
-                    <h1>Dream</h1>
-                    <p>A software that touches human's dreams</p>
-                    <a href="#downloadsoftware" className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                        Make it happen
-                    </a>
+            <section className="hidden first-section absolute top-0 left-0 right-0 bottom-0">
+                <div className="absolute top-0 left-0 right-0 bottom-0">
+                    <VideoComponent />
                 </div>
 
+                <div className="software-form__wrapper absolute flex justify-center items-center space-x-14">
+                    <div className="softwaredownload-container flex flex-col justify-center items-center p-6 bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
+                        <h1>Dream</h1>
+                        <p>A software that touches human's dreams</p>
+                        <a href="#downloadsoftware" className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                            Make it happen
+                        </a>
+                    </div>
 
-                {/* Zaf Login */}
-                <div className="auth-container flex flex-col w-140 h-140 justify-center items-center bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
-                    <form className="loginForm flex flex-col justify-center">
-                        <h1>Login</h1>
+                    {/* Zaf Login */}
+                    <div className="auth-container flex flex-col w-140 h-140 justify-center items-center bg-white/20 backdrop-blur-lg rounded-lg shadow-lg">
+                        <form className="loginForm flex flex-col justify-center">
+                            <h1>Login</h1>
+                            <div className="grid grid-cols-1 relative"></div>
                         <div className="grid grid-cols-1 relative">
                             <span className="authIcons">
                                 <img src={emailIcon} alt="Email Icon"/>
@@ -93,7 +98,7 @@ function Homecontent() {
                 </div>
             </div>
         </section>
-        <section className="second-section absolute top-0 left-0 right-0 bottom-0">
+        <section className="hidden second-section absolute top-0 left-0 right-0 bottom-0">
             <div className="product__wrapper grid grid-cols-[1fr_1.4fr]">
                 <div className="product-introduction">
                     <h1>A Dream Tracking software</h1>
@@ -156,7 +161,91 @@ function Homecontent() {
             
 
         </section>
-        </div>
+
+        <section className="third-section absolute top-0 left-0 right-0 bottom-0">
+            <div className="waitlist__wrapper grid grid-cols-[1fr_1.4fr]">
+                <div className="waitlist-card bg-black/40 backdrop-blur-lg rounded-lg shadow-lg">
+                    <h2>Forge Your Destinity</h2>
+                    <h1>Shape Your Dream</h1>
+                    <p>Dream Software is the first step on your magical journey of self-discovery. Explore your entire ability with our A.I. Dream Tree, 
+                        designed to help you track your progress, pick up more skills, and achieve what you desire.  
+                        Whether you are starting something fresh or reviving a long-lost passion, you get tools, direction, and the little push to make dreams go true. 
+                        Take control of your own story.</p>
+
+                    <a href="#waitlist-button" className="waitlist-button rounded-lg"onClick={(e) => {e.preventDefault(); setIsPopupOpen(true);}}>
+                        Join The Waitlist
+                    </a>
+                </div>
+                <div className="hidden features-offered grid grid-cols-3">
+                    <div className="feature">
+                        <h1 className="what">What</h1>
+                        <div className="card">
+                            <div className="cardimg">
+                                <img src= {cardimg1} alt="card image"/>
+                            </div>
+                            <div className="cardcontent flex flex-col justify-center items-center">
+                                <h1>Dream Tree</h1>
+                                <p>The dream tree is a visualization of the individual’s growth and progress in their journey to pursue their goals generated by our 
+                                    A.I tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="feature">
+                        <div className="card">
+                            <div className="cardimg">
+                                <img src={cardimg2} alt="card image"/>
+                            </div>
+                            <div className="cardcontent flex flex-col justify-center items-center">
+                                <h1>Rewards</h1>
+                                <p>Our platforms offers task point currency as users progresses through their journey in exchange for valuable rewards. Earn Points, 
+                                    Unlock Rewards—Turn Progress into Prizes! </p>
+                            </div>
+                        </div>
+                        <h1 className="we">We</h1>
+                    </div>
+                    <div className="feature">
+                        <h1 className="offer">Offer</h1>
+                        <div className="card">
+                            <div className="cardimg">
+                                <img src={cardimg3} alt="card image"/>
+                            </div>
+                            <div className="cardcontent flex flex-col justify-center items-center">
+                                <h1>Community</h1>
+                                <p>Our community offers collaborative work, progress monitor, and commemorate significant events as our users proceed toward their personal
+                                     growth journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            {/* Popup Modal */}
+            <div 
+                className={`popup-overlay ${isPopupOpen ? "show" : ""}`} 
+                onClick={() => setIsPopupOpen(false)}>
+                <div className={`popup-content ${isPopupOpen ? "show" : ""}`} onClick={(e) => e.stopPropagation()}>
+                    <div className="flex justify-end">
+                        <a href="#close" onClick={() => setIsPopupOpen(false)}>✖</a>   
+                    </div>
+                    <div className="flex">
+                        <img src={launchIllustration} alt="moonIllustration" />
+                        <div className="popup-form flex flex-col ml-12">
+                            <h1>Join Our Waitlist</h1>
+                            <h2>Enter your email to get notified when we launch!</h2>
+                            <div className="grid grid-cols-1">
+                                <input type="text" placeholder="Enter Your Email Address" name="email" id="email" />
+                            </div>
+                            <button className="newsletter-popup">Step Closer to Your Dream</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+    </div>
+        
     );
 }
 
