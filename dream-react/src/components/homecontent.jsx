@@ -8,9 +8,13 @@ import FlipCard from "../components/FlipCard";
 // Assets
 import emailIcon from "../assets/images/icons/email.png";
 import hidepassIcon from "../assets/images/icons/hidepassword.png";
+import ctcIcon from "../assets/images/icons/contact-us.png";
+import userIcon from "../assets/images/icons/username.png";
+import notiIcon from "../assets/images/icons/notification.png";
 import windowsIconOS from "../assets/images/operatingsystem/windowsOS.png";
 import macIconOS from "../assets/images/operatingsystem/macOS.png";
 import linuxIconOS from "../assets/images/operatingsystem/linuxOS.png";
+
 import cardimg1 from "../assets/images/cardimg/dreamtree.png";
 import cardimg2 from "../assets/images/cardimg/rewards.png";
 import cardimg3 from "../assets/images/cardimg/community.jpg";
@@ -244,11 +248,27 @@ function Homecontent() {
         <section className="userprofile-section relative h-screen w-full">
             <div className="userprofile__wrapper">
                 <div className="flex relative top-40">
-                    <div className="userprofile-sidebar w-1/4 border-white border-1">
+                    <div className="userprofile-sidebar w-1/5">
                         {/* User Profile sidebar */}
                         <h1>User Profile Management</h1>
+                        <div className="userprofile-items flex flex-col gap-5">
+                            <button className="userprofile-links flex items-center gap-2 p-2 rounded-md">
+                                <img src={userIcon} alt="User Icon" className="w-5 h-5"/>
+                                <span className="profile">Profile Information</span>
+                            </button>
+
+                            <button className="userprofile-links flex items-center gap-2 p-2 rounded-md">
+                                <img src={ctcIcon} alt="Contact Icon" className="w-5 h-5"/>
+                                <span className="contactinformation">Contact Information</span>
+                            </button>
+
+                            <button className="userprofile-links flex items-center gap-2 p-2 rounded-md">
+                                <img src={notiIcon} alt="Notifications Icon" className="w-5 h-5"/>
+                                <span className="logout">Notifications</span>
+                            </button>
+                        </div>
                     </div>
-                    <div className="userprofile-content w-270 px-3">
+                    <div className="userprofile-content w-360 px-3">
                         {/* User Profile Content */}
                         <div><h1 className="px-7 text-white">Personal Information</h1></div>
                         <hr className="border-2 border-gray-100 rounded-md ml-4"></hr>
