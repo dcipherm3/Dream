@@ -242,18 +242,36 @@ function Homecontent() {
             </div>
         </section>
         <section className="userprofile-section relative h-screen w-full">
-            <div className="flex">
-                <div className="userprofile-sidebar bg-gray-800 w-1/4 h-[120vh]">
-                    {/* User Profile sidebar */}
-                    <h1>User Profile Management</h1>
+            <div className="userprofile__wrapper">
+                <div className="flex relative top-40">
+                    <div className="userprofile-sidebar w-1/4 border-white border-1">
+                        {/* User Profile sidebar */}
+                        <h1>User Profile Management</h1>
+                    </div>
+                    <div className="userprofile-content w-270 px-3">
+                        {/* User Profile Content */}
+                        <div><h1 className="px-7 text-white">Personal Information</h1></div>
+                        <hr className="border-2 border-gray-100 rounded-md ml-4"></hr>
+                        <div className="userprofilepic">
+                            <img src="./src/assets/images/userimage/asianhuzz.jpg" alt="userprofile" />
+                            <div className="uploadphoto"><img src="./src/assets/images/icons/photo.png" alt="uploadphotoicon" /></div>
+                        </div>
+                        <hr className="border-2 border-gray-100 rounded-md ml-4"></hr>
+                        <div className="grid grid-cols-2"></div>
+                    </div>
                 </div>
-                <div className="userprofile-content w-3/4 h-[120vh]">
-                    {/* User Profile Content */}
-                    <h1>User Profile Content</h1>
-                </div>
+            </div>
 
 
 
+
+
+            <div className="hidden contactinformation__wrapper">
+                <div className="contactinformation-content">
+                    <h1>Contact Information</h1>
+                    <p>For more information, please contact us at:</p>
+                    <p>Email:</p>
+            </div>
             </div>
 
         </section>
