@@ -49,7 +49,7 @@ function Homecontent() {
 
 
                 {/* Zaf Login */}
-                <div className="auth-container flex flex-col w-140 h-140 justify-center items-center backdrop-blur-lg shadow-lg">
+                <div className="auth-container flex flex-col w-140 h-160 justify-start items-center backdrop-blur-lg shadow-lg">
                     <form className={`loginForm flex-col justify-center ${isLogin ? "flex" : "hidden"}`}>
                         <h1>Login</h1>
                         <div className="grid grid-cols-1 relative">
@@ -113,15 +113,12 @@ function Homecontent() {
 
                 </div>
 
-                
-                <div className="form-container">
-                </div>
-
             </div>
 
-            <div className="h-36"></div> {/* Spacer */}
-
+            
+        <div className="h-36"></div> {/* Spacer */}
         </section>
+
         <section className="second-section relative h-[120vh] w-full -mt-24">
             <div className="product__wrapper grid grid-cols-[1fr_1.4fr]">
                 <div className="product-introduction">

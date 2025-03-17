@@ -156,13 +156,10 @@
 .auth-container{
   background: rgba(0, 0, 0, 0.4);
   border-radius: 11px;
-  padding: 5rem 4rem;
+  padding: 3rem 3rem 0;
   overflow: hidden;
   border: 2px solid rgb(165, 165, 165);
 }
-
-
-
 
 .loginForm {
   width: 100%;
@@ -178,7 +175,7 @@
 
 .loginForm input:not([type="checkbox"]) {
   background: #FFFFFF;
-  padding: 1rem 4rem;
+  padding: 0.8rem 3rem;
   margin: 15px;
   border-radius: 10px;
   border: none;
@@ -205,8 +202,7 @@
 .loginForm img {
   width: 20px;
   height: 20px;
-  margin-left: 16px;
-  margin-top: .15rem;
+  margin-left: 0.5rem;
 }
 
 .remForgor {
@@ -262,10 +258,12 @@
   }
 
   .loginForm .forgot-password, .redirectregister a {
-    font-size: 1.4rem;  /* Adjust to default size */
-    text-decoration: underline; /* Add underline if needed */
-    color: rgba(132, 116, 249, 1); 
+    font-size: 1.4rem;  
+    text-decoration: underline;
+    color: white; 
     padding-bottom: 10px;
+    transition: color 0.3s ease, color 0.3s ease;
+
   }
   
   
@@ -275,7 +273,7 @@
   
   .loginForm .redirectregister span{
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
 
@@ -296,30 +294,32 @@
 
 .register-form input{
     background: #FFFFFF;
-    padding: 0.8rem 3rem;
+    padding: 0.8rem 1rem 0.8rem 3rem;
     margin: 15px;
     border-radius: 10px;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1.75rem;
     font-weight: 500;
     color: black;
 }
 
 .register-form button{
-    background: rgba(255, 255, 255, 0.5);
-    padding: 1rem 5rem;
-    margin: 15px;
-    border-radius: 31.5px;
-    border: none;
-    font-size: 1.7rem;
-    font-weight: 500;
-    color: white;
-    transition: background 0.3s ease, color 0.3s ease;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 16px 100px 14px;
+  margin: 1rem 0; 
+  border-radius: 100px;
+  border: 2px solid white;
+  font-size: 2rem;
+  color: white;
+  transition: background 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+
 }
 
 .register-form button:hover{
     background: rgba(255, 255, 255, 0.8);
-    color: black;
+    color: #646cff;
+    border-color: white;
 }
 
 .register-form span{
