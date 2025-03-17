@@ -117,7 +117,7 @@ function Homecontent() {
             <div className="h-36"></div> {/* Spacer */}
 
         </section>
-        <section className="second-section relative h-screen w-full -mt-24">
+        <section className="second-section relative h-[120vh] w-full -mt-24">
             <div className="product__wrapper grid grid-cols-[1fr_1.4fr]">
                 <div className="product-introduction">
                     <h1>A Dream Tracking software</h1>
@@ -171,7 +171,7 @@ function Homecontent() {
 
         </section>
 
-        <section className="third-section relative h-screen w-full">
+        <section className="third-section relative h-[120vh] w-full">
             <div className="waitlist__wrapper grid grid-cols-[1fr_1.4fr]">
                 <div className="waitlist-card bg-black/40 backdrop-blur-lg rounded-lg shadow-lg">
                     <h2>Forge Your Destinity</h2>
@@ -229,7 +229,7 @@ function Homecontent() {
                     </div>
                     <div className="flex">
                         <img src={launchIllustration} alt="moonIllustration" />
-                        <div className="popup-form flex flex-col ml-12">
+                        <div className="popup-form flex flex-col">
                             <h1>Join Our Waitlist</h1>
                             <h2>Enter your email to get notified when we launch!</h2>
                             <div className="grid grid-cols-1">
@@ -240,6 +240,22 @@ function Homecontent() {
                     </div>
                 </div>
             </div>
+        </section>
+        <section className="userprofile-section relative h-screen w-full">
+            <div className="flex">
+                <div className="userprofile-sidebar bg-gray-800 w-1/4 h-[120vh]">
+                    {/* User Profile sidebar */}
+                    <h1>User Profile Management</h1>
+                </div>
+                <div className="userprofile-content w-3/4 h-[120vh]">
+                    {/* User Profile Content */}
+                    <h1>User Profile Content</h1>
+                </div>
+
+
+
+            </div>
+
         </section>
 
     

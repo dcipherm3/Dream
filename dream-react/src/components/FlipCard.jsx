@@ -9,7 +9,7 @@ function FlipCard({ frontTitle, backImg, backTitle, backText }) {
 
     return (
         <div
-            className="h-full w-full [perspective:1000px] cursor-pointer hover:scale-105 transition-transform duration-500"
+            className="h-90 w-65 [perspective:1000px] cursor-pointer hover:scale-105 transition-transform duration-500"
             onClick={handleFlip}
         >
             <div

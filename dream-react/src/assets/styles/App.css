@@ -53,7 +53,7 @@
   
   /* Header styles */
   header {
-    background-color: transparent;
+    position: sticky;
     padding: 3rem 2rem;
     z-index: 999;
   }
@@ -83,6 +83,11 @@
     padding: 5px 30px 1px;
     border-radius: 7px;
     font-weight: 500;
+  }
+
+
+  .first-section{
+    margin-top: -9rem; /* Pulls section up, so header overlaps */
   }
 
 .software-form__wrapper {
@@ -514,6 +519,7 @@
 }
 
 .popup-content {
+  font-family: var(--font-dongle);
   position: absolute;
   left: 50%;
   bottom: -100%; /* Start off-screen */
@@ -526,19 +532,17 @@
   overflow: hidden;
   transition: bottom 0.5s ease-in-out, visibility 0.5s ease-in-out;
   visibility: hidden;
+  color: white;
 }
 
 
 .popup-content h1 {
-  font-family: var(--font-dongle);
   font-size: 4rem;
   font-weight: 600;
-  padding: 0;
   margin-bottom: -10px;
 }
 
 .popup-content h2 {
-  font-family: var(--font-dongle);
   font-size: 1.8rem;
   font-weight: 300;
   margin-bottom: 40px;
@@ -592,6 +596,8 @@
   font-weight: 500;
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
+  outline: none;
+  font-size: x-large;
 }
 
 .popup-content button.newsletter-popup {
@@ -599,9 +605,24 @@
   padding: 0.8rem 3rem;
   outline: none;
   color: white;
+  font-size: x-large;
 }
 
 .popup-content button.newsletter-popup:hover {
   background-color: #501D9B;
+  outline: none;
 }
+
+
+
+/** user-profile section*/
+
+.userprofile-section{
+  background: linear-gradient(180deg, #425C8F 0%, #FFFFFF 100%);
+  height: 120vh;
+  width: 100%;
+}
+
+
+
 
