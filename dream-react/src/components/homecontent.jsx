@@ -25,8 +25,8 @@ import launchIllustration from "../assets/images/to-the-stars.svg";
 function Homecontent() {
 
     const [isVisible, setIsVisible] = useState(false);
-
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [isLogin, setIsLogin] = useState(true);
 
     return (
         <div>
@@ -50,7 +50,7 @@ function Homecontent() {
 
                 {/* Zaf Login */}
                 <div className="auth-container flex flex-col w-140 h-140 justify-center items-center backdrop-blur-lg shadow-lg">
-                    <form className="loginForm flex flex-col justify-center">
+                    <form className={`loginForm flex-col justify-center ${isLogin ? "flex" : "hidden"}`}>
                         <h1>Login</h1>
                         <div className="grid grid-cols-1 relative">
                             <span className="authIcons">
@@ -86,16 +86,13 @@ function Homecontent() {
                         <a href="#submit-login" className="submit-login mt-3 text-white rounded-lg flex justify-center items-center self-center">Login</a>
 
                         <div className="redirectregister flex justify-center items-center mt-3">
-                        <span>Not registered yet? <a href="#register" className="text-blue-500 text-sm mt-2 self-end hover:underline">Register?</a> </span>
+                        <span>Not registered yet? <a onClick={() => setIsLogin(!isLogin)} href="#register" className="text-blue-500 text-sm mt-2 self-end hover:underline">Register?</a> </span>
                         </div>
                     </form>
-                </div>
 
-                
-                {/* Hiqal Register */}
-                <div className="form-container">
+                    {/* Hiqal Register */}
                     <div className="formcontent__wrapper">
-                        <div className="register-form flex flex-col justify-center">
+                        <div className={`register-form flex-col justify-center ${isLogin ? "hidden" : "flex"}`}>
                             <h1>Registration</h1>
                             <div className="grid grid-cols-2">
                                 <input type="text" placeholder="Username" name="username" id="username" />
@@ -109,11 +106,15 @@ function Homecontent() {
                             </div>
                             <div className="flex flex-col justify-center items-center">
                                 <button type="submit" name="regbtn" id="regbtn">Register</button>
-                                <span>Already have an account? <a href="#login">Login now</a></span>
+                                <span>Already have an account? <a onClick={() => setIsLogin(!isLogin)} href="#login">Login now</a></span>
                             </div>
                         </div>
-                        
                     </div>
+
+                </div>
+
+                
+                <div className="form-container">
                 </div>
 
             </div>
