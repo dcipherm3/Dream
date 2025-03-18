@@ -257,7 +257,38 @@ function Homecontent() {
                             <div className="uploadphoto"><img src="./src/assets/images/icons/photo.png" alt="uploadphotoicon" /></div>
                         </div>
                         <hr className="border-2 border-gray-100 rounded-md ml-4"></hr>
-                        <div className="grid grid-cols-2"></div>
+                        <div className="switchcontent"> 
+                            <div className="userpersonalinformation_wrapper grid grid-cols-[1.4fr_1fr] px-10 py-10 gap-20">
+                                <div className="flex flex-col gap-10">
+                                    <div className="grid grid-cols-2">
+                                        <div className="flex justify-center items-center">
+                                            <img className="inputicon" src="./src/assets/images/icons/username.png" alt="usericon"/>
+                                            <input type="text" placeholder="username" name="username" id="username"/>
+                                        </div>
+                                        <div className="flex justify-center items-center">
+                                            <img className="inputicon" src="./src/assets/images/icons/gender.png" alt="usericon"/>
+                                            <select name="gender" id="gender">
+                                                <option value="" selected disabled>Gender not selected</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-cols-2 ">
+                                        <div className="flex justify-center items-center">
+                                            <img className="inputicon" src="./src/assets/images/icons/age.png" alt="usericon"/>
+                                            <input type="number" placeholder="age" name="age" id="age" min={7} />
+                                        </div>
+
+                                        <div className="countrystate-container flex items-center"><img src="" alt="" /><p>Country</p></div>
+
+                                    </div>
+                                </div>
+                                <div className="bg-red-100">a</div>
+                            </div>
+                            <div className="contactinfo__wrapper"></div>
+                            <div className="notification__wrapper"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -266,13 +297,6 @@ function Homecontent() {
 
 
 
-            <div className="hidden contactinformation__wrapper">
-                <div className="contactinformation-content">
-                    <h1>Contact Information</h1>
-                    <p>For more information, please contact us at:</p>
-                    <p>Email:</p>
-            </div>
-            </div>
 
         </section>
 
