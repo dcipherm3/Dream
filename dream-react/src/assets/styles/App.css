@@ -51,18 +51,21 @@
     --tertiary-color: black;
 }
   
+
+
   /* Header styles */
   header {
     position: sticky;
-    padding: 3rem 2rem;
+    padding: 0;
+    margin: 3rem 2rem;
     z-index: 999;
   }
   
   .header-title h1 {
     font-family: var(--font-pacifico);
     color: var(--secondary-color);
-    padding-left: 1.5rem;
     font-size: xx-large;
+    padding-left: 1.9rem;
   }
   
   /* Navigation items */
@@ -199,7 +202,13 @@
   transform: translateY(2.2rem);
 }
 
-.loginForm img {
+register-form .authIcons {
+  position: relative;
+  transform: translateY(2.5rem);
+}
+
+
+.authIcons img {
   width: 20px;
   height: 20px;
   margin-left: 0.5rem;
