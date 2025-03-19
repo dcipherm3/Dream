@@ -16,12 +16,16 @@ import cardimg2 from "../assets/images/cardimg/rewards.png";
 import cardimg3 from "../assets/images/cardimg/community.jpg";
 import moonIllustration from "../assets/images/undraw_to-the-moon.svg";
 import launchIllustration from "../assets/images/to-the-stars.svg";
+import searchiconlocation from "../assets/images/icons/search-location.png";
+import arrow from "../assets/images/icons/arrow.png";
+import warningicon from "../assets/images/icons/warning.png";
+import caticon from "../assets/images/icons/cat.png";
 
 
 function Homecontent() {
 
     const [isVisible, setIsVisible] = useState(false);
-
+    const [isDropdownVisible, setDropdownVisible] = useState(false);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     return (
@@ -241,7 +245,7 @@ function Homecontent() {
                 </div>
             </div>
         </section>
-        <section className="userprofile-section relative h-screen w-full">
+        <section className="userprofile-section relative h-[130vh] w-full">
             <div className="userprofile__wrapper">
                 <div className="flex relative top-40">
                     <div className="userprofile-sidebar w-1/4 border-white border-1">
@@ -258,33 +262,100 @@ function Homecontent() {
                         </div>
                         <hr className="border-2 border-gray-100 rounded-md ml-4"></hr>
                         <div className="switchcontent"> 
-                            <div className="userpersonalinformation_wrapper grid grid-cols-[1.4fr_1fr] px-10 py-10 gap-20">
-                                <div className="flex flex-col gap-10">
-                                    <div className="grid grid-cols-2">
+                            <div className="userpersonalinformation_wrapper grid grid-cols-[1.5fr_1fr] py-10 gap-15">
+                                <div className="flex flex-col gap-10 w-full">
+                                    <div className="grid grid-cols-3">
                                         <div className="flex justify-center items-center">
                                             <img className="inputicon" src="./src/assets/images/icons/username.png" alt="usericon"/>
                                             <input type="text" placeholder="username" name="username" id="username"/>
                                         </div>
-                                        <div className="flex justify-center items-center">
-                                            <img className="inputicon" src="./src/assets/images/icons/gender.png" alt="usericon"/>
-                                            <select name="gender" id="gender">
-                                                <option value="" selected disabled>Gender not selected</option>
-                                                <option value="male">Male</option>
-                                                <option value="female">Female</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="grid grid-cols-2 ">
+
                                         <div className="flex justify-center items-center">
                                             <img className="inputicon" src="./src/assets/images/icons/age.png" alt="usericon"/>
                                             <input type="number" placeholder="age" name="age" id="age" min={7} />
                                         </div>
 
-                                        <div className="countrystate-container flex items-center"><img src="" alt="" /><p>Country</p></div>
+                                        <div className="flex justify-center items-center">
+                                            <img className="inputicon" src="./src/assets/images/icons/gender.png" alt="usericon"/>
+                                            <select name="gender" id="gender">
+                                                <option value="" selected disabled>Select Gender</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-cols-1 ml-5">
+                                        <div className="flex flex-col justify-center items-center relative">
+                                            <div className="countrystate-container">
+                                                <a href="#country" className="country" onClick={(e) => {e.preventDefault(); setDropdownVisible(!isDropdownVisible); }}> Country</a>
+                                                <div className="divider"></div> 
+                                                <a href="#state" className="state">State</a>
+                                            </div>
 
+                                            {/* Dropdown (Hidden by default) */}
+                                            {isDropdownVisible && (
+        <div
+        className={`countrystate-dropdown transform transition-all duration-300 ${
+          isDropdownVisible ? "opacity-100 scale-100 translate-y-2" : "opacity-0 scale-95 translate-y-0 pointer-events-none"
+        }`}
+      >
+                                                {/* Search Bar */}
+                                                <div className="flex justify-center">
+                                                    <div className="search-countrystate">
+                                                    <img src={searchiconlocation} alt="Search" />
+                                                    <input type="text" placeholder="Search country..." />
+                                                    </div>
+                                                </div>
+
+                                                {/* Country Grid */}
+                                                <div className="grid p-3 grid-cols-4 grid-rows-4 w-full h-full justify-center items-center gap-x-5 gap-y-5 p-5">
+                                                    {["Malaysia", "United States", "United Kingdom", "Japan", "Canada", 
+                                                    "Germany", "France", "Australia", "India", "Brazil", "South Korea", 
+                                                    "China", "Italy", "Mexico", "South Africa", "Saudi Arabia"]
+                                                    .map((country, index) => (
+                                                        <span key={index} className="countrystate-item">{country}</span>
+                                                    ))}
+                                                </div>
+
+                                                {/* Pagination */}
+                                                <div className="flex justify-center p-5">
+                                                    <div className="pagination-container flex items-center">
+                                                    <div className="previous"><img src= {arrow} alt="Previous" /></div>
+                                                    <div className="pagination-item bg-indigo-500 text-white"><span>1</span></div>
+                                                    <div className="pagination-item"><span>2</span></div>
+                                                    <div className="pagination-item"><span>3</span></div>
+                                                    <div className="next"><img src= {arrow} alt="Next" /></div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="deletion-reminder flex items-center justify-self-center">
+                                            <div className="warningicon-circle"><img src={caticon} alt="warningicon"/></div>
+                                            <p>User are reminded to fill out personal information before
+                                            using the launcher.</p>
+                                        </div>               
                                     </div>
                                 </div>
-                                <div className="bg-red-100">a</div>
+                                <div className="deleteaccount__wrapper flex flex-col">
+                                    <div className="wrapper ml-7 mt-3">
+                                        <div><h1>Delete account</h1></div>
+                                        <div>
+                                            <div className="deletion-reminder flex items-center">
+                                                <div className="warningicon-circle"><img src={warningicon} alt="warningicon"/></div>
+                                                <p>After making deletion request, you have one month to maintain this account.</p>
+                                            </div>               
+                                        </div>
+                                        <div className="deletion-details">
+                                            <p>To permanently erase your whole account, click the button below to get a deletion request. A reminder that the progress you have made
+                                            so far will be lost. The deletion process is irreversible. </p>
+                                        </div>
+                                        <div className="flex justify-center pb-10"><a href="#delete" className="deleteaccountrequest">Ask for an account deletion request</a></div>
+                                    </div>
+
+                                </div>
                             </div>
                             <div className="contactinfo__wrapper"></div>
                             <div className="notification__wrapper"></div>
@@ -292,10 +363,6 @@ function Homecontent() {
                     </div>
                 </div>
             </div>
-
-
-
-
 
 
         </section>
