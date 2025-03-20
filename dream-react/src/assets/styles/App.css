@@ -662,14 +662,14 @@
 
 /* Correct selector: Target img inside .uploadphoto when .uploadphoto is hovered */
 .uploadphoto:hover > img {
-  transform: rotate(380deg);
-  transition: transform 0.5s ease-in-out;
+  transform: rotate(30deg);
+  transition: transform 0.2s ease-in-out;
 }
 
 .uploadphoto img {
   width: 30px;
   height: 30px;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 
