@@ -656,7 +656,7 @@
   transition: transform 0.2s ease-in-out;
 }
 
-uploadphoto img {
+.uploadphoto img {
   width: 30px;
   height: 30px;
   transition: transform 0.4s ease-in-out;
@@ -910,11 +910,12 @@ uploadphoto img {
 
 .deleteaccount__wrapper h1{
   font-size: xx-large;
+  color: black;
 }
 
 .deletion-reminder{
   background-color: rgb(0, 0, 0,0.3);
-  width: 360px;
+  width: 490px;
   display: flex;
   align-items: center;
   padding: 3px;
@@ -934,7 +935,7 @@ uploadphoto img {
 
 .deletion-reminder img{
   height: 30px;
-  width: 40px;
+  width: 30px;
 }
 
 .deletion-reminder p{

@@ -283,14 +283,15 @@ function Homecontent() {
                         <hr className="border-2 border-gray-100 rounded-md ml-4"></hr>
                         <div className="switchcontent"> 
                             <div className="switchcontent"> 
-                            <div className="hidden userpersonalinformation_wrapper grid grid-cols-[1.5fr_1fr] py-10 gap-15">
+                            <div className="userpersonalinformation_wrapper grid grid-cols-[1.5fr_1fr] py-10 gap-15">
                                 <div className="flex flex-col gap-10 w-full">
                                     <div className="grid grid-cols-3">
                                         <div className="flex justify-center items-center">
-                                            <img className="inputicon" src="./src/assets/images/icons/username.png" alt="usericon"/>
+                                            
+                                                <img className="inputicon" src="./src/assets/images/icons/username.png" alt="usericon"/>
+                                            
                                             <input type="text" placeholder="username" name="username" id="username"/>
                                         </div>
-
                                         <div className="flex justify-center items-center">
                                             <img className="inputicon" src="./src/assets/images/icons/age.png" alt="usericon"/>
                                             <input type="number" placeholder="age" name="age" id="age" min={7} />
@@ -334,7 +335,7 @@ function Homecontent() {
                                                         "Germany", "France", "Australia", "India", "Brazil", "South Korea", 
                                                         "China", "Italy", "Mexico", "South Africa", "Saudi Arabia"]
                                                         .map((country, index) => (
-                                                            <span key={index} className="countrystate-item">{country}</span>
+                                                            <span key={index} className="countrystate-item text-black">{country}</span>
                                                         ))}
                                                     </div>
 
