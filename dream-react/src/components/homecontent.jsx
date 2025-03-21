@@ -14,7 +14,6 @@ import linuxIconOS from "../assets/images/operatingsystem/linuxOS.png";
 import cardimg1 from "../assets/images/cardimg/dreamtree.png";
 import cardimg2 from "../assets/images/cardimg/rewards.png";
 import cardimg3 from "../assets/images/cardimg/community.jpg";
-import moonIllustration from "../assets/images/undraw_to-the-moon.svg";
 import launchIllustration from "../assets/images/to-the-stars.svg";
 import searchiconlocation from "../assets/images/icons/search-location.png";
 import arrow from "../assets/images/icons/arrow.png";
@@ -232,7 +231,7 @@ function Homecontent() {
                         <a href="#close" onClick={() => setIsPopupOpen(false)}>✖</a>   
                     </div>
                     <div className="flex">
-                        <img src={launchIllustration} alt="moonIllustration" />
+                        <img src={launchIllustration} alt="moonIllustration"/>  
                         <div className="popup-form flex flex-col">
                             <h1>Join Our Waitlist</h1>
                             <h2>Enter your email to get notified when we launch!</h2>
@@ -252,121 +251,138 @@ function Homecontent() {
                         {/* User Profile sidebar */}
                         <h1>User Profile Management</h1>
                     </div>
-                    <div className="userprofile-content w-270 px-3">
+
+                    <div className="userprofile-content w-360 px-3">
                         {/* User Profile Content */}
-                        <div><h1 className="px-7 text-white">Personal Information</h1></div>
-                        <hr className="border-2 border-gray-100 rounded-md ml-4"></hr>
-                        <div className="userprofilepic">
-                            <img src="./src/assets/images/userimage/asianhuzz.jpg" alt="userprofile" />
-                            <div className="uploadphoto"><img src="./src/assets/images/icons/photo.png" alt="uploadphotoicon" /></div>
-                        </div>
-                        <hr className="border-2 border-gray-100 rounded-md ml-4"></hr>
-                        <div className="switchcontent"> 
-                            <div className="userpersonalinformation_wrapper grid grid-cols-[1.5fr_1fr] py-10 gap-15">
-                                <div className="flex flex-col gap-10 w-full">
-                                    <div className="grid grid-cols-3">
-                                        <div className="flex justify-center items-center">
-                                            <img className="inputicon" src="./src/assets/images/icons/username.png" alt="usericon"/>
-                                            <input type="text" placeholder="username" name="username" id="username"/>
+                        <div className="userpersonal-info">
+                            <div><h1 className="px-7 text-white">Personal Information</h1></div>
+                            <hr className="hidden border-2 border-gray-100 rounded-md ml-4"></hr>
+                            <div className="hidden userprofilepic">
+                                <img src="./src/assets/images/userimage/asianhuzz.jpg" alt="userprofile" />
+                                <div className="uploadphoto"><img src="./src/assets/images/icons/photo.png" alt="uploadphotoicon" /></div>
+                            </div>
+                            <hr className="border-2 border-gray-100 rounded-md ml-4"></hr>
+                            <div className="switchcontent"> 
+                                <div className="userpersonalinformation_wrapper grid grid-cols-[1.4fr_1fr] px-10 py-10 gap-20">
+                                    <div className="flex flex-col gap-10">
+                                        <div className="grid grid-cols-2">
+                                            <div className="flex justify-center items-center">
+                                                <img className="inputicon" src="./src/assets/images/icons/username.png" alt="usericon"/>
+                                                <input type="text" placeholder="username" name="username" id="username"/>
+                                            </div>
+                                            <div className="flex justify-center items-center">
+                                                <img className="inputicon" src="./src/assets/images/icons/gender.png" alt="usericon"/>
+                                                <select name="gender" id="gender">
+                                                    <option value="" selected disabled>Gender not selected</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                </select>
+                                            </div>
                                         </div>
-
-                                        <div className="flex justify-center items-center">
-                                            <img className="inputicon" src="./src/assets/images/icons/age.png" alt="usericon"/>
-                                            <input type="number" placeholder="age" name="age" id="age" min={7} />
-                                        </div>
-
-                                        <div className="flex justify-center items-center">
-                                            <img className="inputicon" src="./src/assets/images/icons/gender.png" alt="usericon"/>
-                                            <select name="gender" id="gender">
-                                                <option value="" selected disabled>Select Gender</option>
-                                                <option value="male">Male</option>
-                                                <option value="female">Female</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="grid grid-cols-1 ml-5">
-                                        <div className="flex flex-col justify-center items-center relative">
-                                            <div className="countrystate-container">
-                                                <a href="#country" className="country" onClick={(e) => {e.preventDefault(); setDropdownVisible(!isDropdownVisible); }}> Country</a>
-                                                <div className="divider"></div> 
-                                                <a href="#state" className="state">State</a>
+                                        <div className="grid grid-cols-2 ">
+                                            <div className="flex justify-center items-center">
+                                                <img className="inputicon" src="./src/assets/images/icons/age.png" alt="usericon"/>
+                                                <input type="number" placeholder="age" name="age" id="age" min={7} />
                                             </div>
 
-                                            {/* Dropdown (Hidden by default) */}
-                                            {isDropdownVisible && (
-        <div
-        className={`countrystate-dropdown transform transition-all duration-300 ${
-          isDropdownVisible ? "opacity-100 scale-100 translate-y-2" : "opacity-0 scale-95 translate-y-0 pointer-events-none"
-        }`}
-      >
-                                                {/* Search Bar */}
-                                                <div className="flex justify-center">
-                                                    <div className="search-countrystate">
-                                                    <img src={searchiconlocation} alt="Search" />
-                                                    <input type="text" placeholder="Search country..." />
-                                                    </div>
-                                                </div>
+                                            <div className="countrystate-container flex items-center"><img src="" alt="" /><p>Country</p></div>
 
-                                                {/* Country Grid */}
-                                                <div className="grid p-3 grid-cols-4 grid-rows-4 w-full h-full justify-center items-center gap-x-5 gap-y-5 p-5">
-                                                    {["Malaysia", "United States", "United Kingdom", "Japan", "Canada", 
-                                                    "Germany", "France", "Australia", "India", "Brazil", "South Korea", 
-                                                    "China", "Italy", "Mexico", "South Africa", "Saudi Arabia"]
-                                                    .map((country, index) => (
-                                                        <span key={index} className="countrystate-item">{country}</span>
-                                                    ))}
-                                                </div>
-
-                                                {/* Pagination */}
-                                                <div className="flex justify-center p-5">
-                                                    <div className="pagination-container flex items-center">
-                                                    <div className="previous"><img src= {arrow} alt="Previous" /></div>
-                                                    <div className="pagination-item bg-indigo-500 text-white"><span>1</span></div>
-                                                    <div className="pagination-item"><span>2</span></div>
-                                                    <div className="pagination-item"><span>3</span></div>
-                                                    <div className="next"><img src= {arrow} alt="Next" /></div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            )}
                                         </div>
                                     </div>
-                                    <div>
-                                        <div className="deletion-reminder flex items-center justify-self-center">
-                                            <div className="warningicon-circle"><img src={caticon} alt="warningicon"/></div>
-                                            <p>User are reminded to fill out personal information before
-                                            using the launcher.</p>
-                                        </div>               
+                                    <div className="bg-red-100">a</div>
+                                </div>
+                                <div className="hidden contactinfo__wrapper grid grid-cols-[0.6fr_1fr] px-10 py-10 gap-20">
+                                    <div className="flex flex-col gap-10">
+                                        <div className="grid grid-cols-1">
+                                            <div className="input">
+                                                <div className="img-placeholder">
+                                                    <img className="inputicon" src="./src/assets/images/icons/email-verified.png" alt="usericon"/>
+                                                </div>
+                                                <input type="text" placeholder="ashleyBaddieXO@icloud.com" name="email" id="email"/>
+                                            </div>
+                                            <div className="input">
+                                                <div className="img-placeholder">
+                                                    <img className="inputicon" src="./src/assets/images/icons/telephonenumber.png" alt="usericon"/>
+                                                </div>
+                                                <input type="text" placeholder="Phone number" name="phoneno" id="phoneno"/>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="deleteaccount__wrapper flex flex-col">
-                                    <div className="wrapper ml-7 mt-3">
-                                        <div><h1>Delete account</h1></div>
-                                        <div>
-                                            <div className="deletion-reminder flex items-center">
-                                                <div className="warningicon-circle"><img src={warningicon} alt="warningicon"/></div>
-                                                <p>After making deletion request, you have one month to maintain this account.</p>
-                                            </div>               
+                                <div className="hidden notification__wrapper px-10 py-10 gap-20">
+                                    <div className="flex flex-col gap-10">
+                                        <div className="notification-bubble">
+                                            <div className="flex justify-between items-center">
+                                                <div className="img-placeholder-noti">
+                                                    <img className="noti-icon" src="./src/assets/images/icons/fantasy.svg" alt="usericon"/>
+                                                </div>
+                                                <div className="noti-message">
+                                                    <p>A new branch has grown from your <b>“Freelance Architect”</b> Dream Tree! </p>
+                                                </div>
+                                            </div>
+                                            <div className="img-placeholder-noti">
+                                                <img width={40} height={40} className="cancel-icon" src="./src/assets/images/icons/cancel.png" alt="usericon"/>
+                                            </div>
                                         </div>
-                                        <div className="deletion-details">
-                                            <p>To permanently erase your whole account, click the button below to get a deletion request. A reminder that the progress you have made
-                                            so far will be lost. The deletion process is irreversible. </p>
-                                        </div>
-                                        <div className="flex justify-center pb-10"><a href="#delete" className="deleteaccountrequest">Ask for an account deletion request</a></div>
                                     </div>
-
+                                    <div className="flex flex-col gap-10">
+                                        <div className="notification-bubble">
+                                            <div className="flex justify-between items-center">
+                                                <div className="img-placeholder-noti">
+                                                    <img className="noti-icon" src="./src/assets/images/icons/goal.svg" alt="usericon"/>
+                                                </div>
+                                                <div className="noti-message">
+                                                    <p>You’re progressing in an excellent rate this past two weeks! You’ve completed two branch for your <b>“Freelance Architect”</b> Dream Tree so far!</p>
+                                                </div>
+                                            </div>
+                                            <div className="img-placeholder-noti">
+                                                <img width={40} height={40} className="cancel-icon" src="./src/assets/images/icons/cancel.png" alt="usericon"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col gap-10">
+                                        <div className="notification-bubble">
+                                            <div className="flex justify-between items-center">
+                                                <div className="img-placeholder-noti">
+                                                    <img className="noti-icon" src="./src/assets/images/icons/goal-1.svg" alt="usericon"/>
+                                                </div>
+                                                <div className="noti-message">
+                                                    <p>Uh-oh! You didn’t opened the dream app for two weeks now! you got to step up the game!</p>
+                                                </div>
+                                            </div>
+                                            <div className="img-placeholder-noti">
+                                                <img width={40} height={40} className="cancel-icon" src="./src/assets/images/icons/cancel.png" alt="usericon"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col gap-10">
+                                        <div className="notification-bubble">
+                                            <div className="flex justify-between items-center">
+                                                <div className="img-placeholder-noti">
+                                                    <img className="noti-icon" src="./src/assets/images/icons/goal-2.svg" alt="usericon"/>
+                                                </div>
+                                                <div className="noti-message">
+                                                    <p>Welcome to the battleground princess! we’re glad to have you on board!</p>
+                                                </div>
+                                            </div>
+                                            <div className="img-placeholder-noti">
+                                                <img width={40} height={40} className="cancel-icon" src="./src/assets/images/icons/cancel.png" alt="usericon"/>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="contactinfo__wrapper"></div>
-                            <div className="notification__wrapper"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-        </section>
 
+
+
+
+        </section>
     
     </div>
         
