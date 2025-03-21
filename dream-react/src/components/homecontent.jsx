@@ -28,8 +28,8 @@ function Homecontent() {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     return (
-        <div>
-        <section className="first-section relative h-[120vh] w-full">
+        <div className="max-w-screen">
+        <section className="first-section relative h-[100vh]">
             
             <div className="absolute top-0 left-0 right-0 bottom-0">
                 <VideoComponent />
@@ -117,10 +117,11 @@ function Homecontent() {
 
             </div>
 
-            <div className="h-36"></div> {/* Spacer */}
 
         </section>
-        <section className="second-section relative h-[120vh] w-full -mt-24">
+        <div className="h-20"></div> {/* Spacer */}
+
+        <section className="second-section h-[120vh]">
             <div className="product__wrapper grid grid-cols-[1fr_1.4fr]">
                 <div className="product-introduction">
                     <h1>A Dream Tracking software</h1>
@@ -174,7 +175,7 @@ function Homecontent() {
 
         </section>
 
-        <section className="third-section relative h-[120vh] w-full">
+        <section className="third-section relative h-[120vh]">
             <div className="waitlist__wrapper grid grid-cols-[1fr_1.4fr]">
                 <div className="waitlist-card bg-black/40 backdrop-blur-lg rounded-lg shadow-lg">
                     <h2>Forge Your Destinity</h2>
@@ -244,7 +245,7 @@ function Homecontent() {
                 </div>
             </div>
         </section>
-        <section className="userprofile-section relative h-[130vh] w-full">
+        <section className="userprofile-section relative h-[130vh]">
             <div className="userprofile__wrapper">
                 <div className="flex relative top-40">
                     <div className="userprofile-sidebar w-1/4 border-white border-1">

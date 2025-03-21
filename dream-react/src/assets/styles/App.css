@@ -49,6 +49,7 @@
     --font-courgette: "Courgette", sans-serif;
     --secondary-color: white;
     --tertiary-color: black;
+
 }
   
   /* Header styles */
@@ -880,15 +881,6 @@
 .previous, .next,.pagination-item{
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
->>>>>>>>> Temporary merge branch 2
 
 .userprofile-sidebar::after {
   content: "";
