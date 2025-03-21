@@ -248,9 +248,9 @@ function Homecontent() {
                 </div>
             </div>
         </section>
-        <section className="userprofile-section relative h-screen w-full">
+        <section className="userprofile-section relative h-[120vh] w-full">
             <div className="userprofile__wrapper">
-                <div className="flex relative top-40">
+                <div className="flex relative top-65">
                     <div className="userprofile-sidebar w-1/5">
                         {/* User Profile sidebar */}
                         <h1>User Profile Management</h1>
