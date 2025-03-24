@@ -43,7 +43,7 @@ function Homecontent() {
 
             <div className="h-36"></div> {/* Spacer */}
 
-            <div className="flex justify-around items-center py-16 px-36">
+            <div className="flex justify-around items-center px-36">
                 <div className="softwaredownload-container flex flex-col justify-center items-center p-6 backdrop-blur-lg shadow-lg">
                     <h1>Dream</h1>
                     <p>A software that touches human's dreams</p>
