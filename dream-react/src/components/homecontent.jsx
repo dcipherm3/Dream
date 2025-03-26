@@ -35,96 +35,28 @@ function Homecontent() {
 
     return (
         <div>
-        <section className="first-section relative h-[120vh] w-full">
-            
-            <div className="absolute top-0 left-0 right-0 bottom-0">
-                <VideoComponent />
-            </div>
 
-            <div className="h-36"></div> {/* Spacer */}
+        <VideoComponent/>
 
-            <div className="flex justify-around items-center px-36">
-                <div className="softwaredownload-container flex flex-col justify-center items-center p-6 backdrop-blur-lg shadow-lg">
-                    <h1>Dream</h1>
-                    <p>A software that touches human's dreams</p>
-                    <a href="#downloadsoftware" className=" text-white rounded-lg hover:bg-blue-700 transition">
-                        Make it happen
-                    </a> 
-                </div>
+        {/* Section 1 */}
+        <div className="section-1 flex-wrap flex flex-col justify-center h-[calc(100vh-3rem)] -mt-24 overflow-hidden" id="sectionBox"> 
+            <div className="flex relative justify-evenly w-full -right-[48vw]">
+                <div id="welcomeSection" className="softwaredl bg-black/50 backdrop-blur-md border-transparent border-2 rounded-2xl py-12 px-24">
+                    <div className="flex flex-col items-center">
+                        <h1 className="pb-8" >Dream</h1>
+                        <h2 className="pb-8">A software that touches a human's dream</h2>
+                        <a className="relative border-2 border-white rounded-full pt-[calc(0.75rem+2px)] pb-3 px-12 transition-all">Make it happen</a>
 
-
-                {/* Zaf Login */}
-                <div className="auth-container flex flex-col w-140 h-160 justify-start items-center backdrop-blur-lg shadow-lg">
-                    <form className={`loginForm flex-col justify-center ${isLogin ? "flex" : "hidden"}`}>
-                        <h1>Login</h1>
-                        <div className="grid grid-cols-1 relative">
-                            <span className="authIcons">
-                                <img src={emailIcon} alt="Email Icon"/>
-                            </span>
-                            <input type="email" placeholder="Email" required/>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 relative w-full">
-                            <span className="authIcons">
-                                <img 
-                                    src={isVisible ? eyeOpened : eyeClosed} 
-                                    alt="Toggle Password" 
-                                    className="hover:cursor-pointer"
-                                    onClick={() => setIsVisible(!isVisible)}
-                                />
-                            </span>
-                            <input type={isVisible ? "text" : "password"} placeholder="Password" required/>
-                        </div>
-                        
-                        <div className="remForgor grid grid-cols-2 justify-center items-center"> 
-                            <div className="justify-self-start">
-                            <label className="flex items-center text-white">
-                                <input type="checkbox" className="checkbox-remember mb-1 accent-blue-600" />
-                                <span className="pl-2">Remember Me</span>
-                            </label>
-                            </div>
-                            <div className="justify-self-end">
-                            <a href="#forgot-password" className="forgot-password">Forgot Password?</a>
-                            </div>
-                        </div>
-
-                        <a href="#submit-login" className="submit-login mt-3 text-white rounded-lg flex justify-center items-center self-center">Login</a>
-
-                        <div className="redirectregister flex justify-center items-center mt-3">
-                        <span>Not registered yet? <a onClick={() => setIsLogin(!isLogin)} href="#register" className="text-blue-500 text-sm mt-2 self-end hover:underline">Register?</a> </span>
-                        </div>
-                    </form>
-
-                    {/* Hiqal Register */}
-                    <div className="formcontent__wrapper">
-                        <div className={`register-form flex-col justify-center ${isLogin ? "hidden" : "flex"}`}>
-                            <h1>Registration</h1>
-                            <div className="grid grid-cols-2">
-                                <input type="text" placeholder="Username" name="username" id="username" />
-                                <input type="text" placeholder="Email" name="email" id="email" />
-                            </div>
-                            <div className="grid grid-cols-1">
-                                <input type="password" placeholder="password" name="password" id="password" />
-                            </div>
-                            <div className="grid grid-cols-1">
-                                <input type="password" placeholder="retype-password" name="password" id="password" />
-                            </div>
-                            <div className="flex flex-col justify-center items-center">
-                                <button type="submit" name="regbtn" id="regbtn">Register</button>
-                                <span>Already have an account? <a onClick={() => setIsLogin(!isLogin)} href="#login">Login now</a></span>
-                            </div>
-                        </div>
                     </div>
-
                 </div>
-
+                <div id="login&registration" className="text-white border-white border-2 rounded-2xl ">
+                    THIS IS THE LOGIN AND REGISTRATION SECTION IS REAL VERY REAL SO REAL
+                </div>
             </div>
+        </div>
 
-            
-        <div className="h-36"></div> {/* Spacer */}
-        </section>
-
-        <section className="second-section relative h-[120vh] w-full -mt-24">
+        {/* Section 2 */}
+        <section className="second-section relative h-[120vh] w-full">
             <div className="product__wrapper grid grid-cols-[1fr_1.4fr]">
                 <div className="product-introduction">
                     <h1>A Dream Tracking software</h1>
