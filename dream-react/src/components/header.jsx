@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/App.css';
 
-function Header(){
+function Header({clickRegister}){
     return (
         <header className="absolute top-0 left-0 w-full flex justify-between items-center">
             <div className="header-title">
@@ -12,7 +12,7 @@ function Header(){
                     <li>Our Socials</li>
                     <li>Support</li>
                     <li>More</li>
-                    <li><a href='#register'>Register</a></li>
+                    <li><a id='regButton' className='cursor-pointer' onClick={clickRegister}>Join</a></li>
                 </ul>
             </div>
         </header>

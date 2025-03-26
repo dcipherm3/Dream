@@ -8,6 +8,7 @@ import FlipCard from "../components/FlipCard";
 // Assets
 import emailIcon from "../assets/images/icons/email.png";
 import hidepassIcon from "../assets/images/icons/hidepassword.png";
+import keylockIcon from "../assets/images/icons/door-key.png";
 import ctcIcon from "../assets/images/icons/contact-us.png";
 import userIcon from "../assets/images/icons/username.png";
 import notiIcon from "../assets/images/icons/notification.png";
@@ -26,31 +27,101 @@ import warningicon from "../assets/images/icons/warning.png";
 import caticon from "../assets/images/icons/cat.png";
 
 
-function Homecontent() {
+function Homecontent({regToggleValue}) {
 
     const [isVisible, setIsVisible] = useState(false);
     const [isDropdownVisible, setDropdownVisible] = useState(false);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
-    const [isLogin, setIsLogin] = useState(true);
-
+    const [isLogin, setIsLogin] = useState(false);
+    
     return (
         <div>
 
         <VideoComponent/>
 
         {/* Section 1 */}
-        <div className="section-1 flex-wrap flex flex-col justify-center h-[calc(100vh-3rem)] -mt-24 overflow-hidden" id="sectionBox"> 
-            <div className="flex relative justify-evenly w-full -right-[48vw]">
-                <div id="welcomeSection" className="softwaredl bg-black/50 backdrop-blur-md border-transparent border-2 rounded-2xl py-12 px-24">
-                    <div className="flex flex-col items-center">
+        <div className="section-1 flex-wrap flex flex-col justify-center h-[calc(100vh-6rem)] -mt-12 overflow-hidden" id="sectionBox"> 
+            <div className={`flex relative items-center justify-evenly w-full -righto-[48vw] ${regToggleValue ? "translate-x-[0vw]" : "translate-x-[50vw]"} transition-all duration-700`}> 
+                
+                <div id="welcomeSection" className="softwaredl bg-black/75 backdrop-blur-md border-transparent border-2 rounded-2xl py-12 px-24 h-fit">
+                    <div className="flex flex-col items-center ">
                         <h1 className="pb-8" >Dream</h1>
                         <h2 className="pb-8">A software that touches a human's dream</h2>
-                        <a className="relative border-2 border-white rounded-full pt-[calc(0.75rem+2px)] pb-3 px-12 transition-all">Make it happen</a>
+                        <a className="relative border-2 border-white rounded-full pt-[calc(0.75rem+2px)] pb-3 px-12 transition-all cursor-pointer">Make it happen</a>
 
                     </div>
                 </div>
-                <div id="login&registration" className="text-white border-white border-2 rounded-2xl ">
-                    THIS IS THE LOGIN AND REGISTRATION SECTION IS REAL VERY REAL SO REAL
+
+
+
+                <div id="login&registration" className="credSection relative bg-black/75 backdrop-blur-md border-transparent border-2 rounded-2xl w-160 h-[75vh]">
+                    <div id="login" className={`absolute flex flex-col items-center py-8 px-18 h-full w-full transition-all duration-700 ${isLogin ? "translate-y-0 opacity-100" : "translate-y-[50px] opacity-0 pointer-events-none"} `}>
+                        <h2 className="mb-4">Login</h2>
+
+                        <form action="" className="w-full h-full flex flex-col justify-between">
+                            <div>
+                                <inputCloset className="relative flex flex-row bg-white rounded-md mb-12 overflow-hidden">
+                                    <img src={emailIcon} alt="" className="size-5 m-4" />
+                                    <input type="text" placeholder="Email" className="w-full pr-4" />
+                                </inputCloset>
+                                <inputCloset className="relative flex flex-row bg-white rounded-md mb-4 overflow-hidden">
+                                    <img src={eyeClosed} alt="" className="size-5 m-4 cursor-pointer" />
+                                    <input type="password" placeholder="Password" className="w-full pr-4"/>
+                                </inputCloset>
+                                <div className="flex flex-row justify-between">
+                                    <div className="flex ">
+                                        <input type="checkbox" className="mr-2"/>
+                                        <p>Remember me</p>
+                                    </div>
+                                    <div>
+                                        <a href="" className="transition-all duration-400"><p>Recovery password?</p></a>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row justify-center mt-8 ">
+                                    <a className="cursor-pointer border-2 border-white rounded-full pt-[calc(0.75rem+2px)] pb-3 text-center w-1/2 transition-colors duration-400 hover:bg-white">Login</a>
+                                </div>
+                            </div>
+                            <div className="flex flex-row justify-center">
+                                <p className="pr-1">Haven’t made an account?</p><a className="transition-all duration-400 cursor-pointer" onClick={() => setIsLogin(!isLogin)}><p>Register now</p></a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="register" className={` absolute flex flex-col items-center py-8 px-18 h-full transition-all duration-700 ${isLogin ? "translate-y-[-50px] opacity-0 pointer-events-none " : "translate-y-0 opacity-100 "}`}>
+                        <h2 className="">Register</h2>
+
+                        <form action="" className="w-full h-full flex flex-col justify-between">
+                            <div>
+                                <div className="flex flex-row gap-4">
+                                    <inputCloset className="relative flex flex-row bg-white rounded-md mb-10 overflow-hidden w-1/2">
+                                        <img src={emailIcon} alt="" className="size-5 m-4" />
+                                        <input type="text" placeholder="Username" className="w-full pr-4" />
+                                    </inputCloset>
+                                    <inputCloset className="relative flex flex-row bg-white rounded-md mb-10 overflow-hidden w-1/2">
+                                        <img src={userIcon} alt="" className="size-5 m-4" />
+                                        <input type="text" placeholder="Email" className="w-full pr-4" />
+                                    </inputCloset>
+                                </div>
+
+                                <inputCloset className="relative flex flex-row bg-white rounded-md mb-10 overflow-hidden">
+                                        <img src={keylockIcon} alt="" className="size-5 m-4" />
+                                        <input type="password" placeholder="Password" className="w-full pr-4"/>
+                                </inputCloset>
+
+                                <inputCloset className="relative flex flex-row bg-white rounded-md mb-12 overflow-hidden">
+                                        <img src={keylockIcon} alt="" className="size-5 m-4" />
+                                        <input type="password" placeholder="Re-type password" className="w-full pr-4"/>
+                                </inputCloset>
+
+                                <div className="flex flex-row justify-center mt-8 ">
+                                    <a className="cursor-pointer border-2 border-white rounded-full pt-[calc(0.75rem+2px)] pb-3 text-center w-1/2 transition-colors duration-400 hover:bg-white">Register</a>
+                                </div>
+                            </div>
+                            <div className="flex flex-row justify-center">
+                                <p className="pr-1">Already have an account?</p><a className="transition-all duration-400 cursor-pointer" onClick={() => setIsLogin(!isLogin)}><p>Login now</p></a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

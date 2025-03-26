@@ -76,7 +76,7 @@
   }
   
   /* Register button */
-  .header-items ul li a[href='#register'] {
+  .header-items ul li a[id="regButton"] {
     text-decoration: none;
     color: var(--tertiary-color);
     background-color: var(--secondary-color);
@@ -86,9 +86,7 @@
   }
 
 
-  .first-section{
-    margin-top: -9rem; /* Pulls section up, so header overlaps */
-  }
+  /* first section */
   .section-1 h1 {
     font-family: var(--font-pacifico);
     font-size: 5rem;
@@ -123,186 +121,32 @@
     height: 100%;
   }
 
-/*Authentication container*/
-.auth-container{
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 11px;
-  padding: 3rem 3rem 0;
-  overflow: hidden;
-  border: 2px solid rgb(165, 165, 165);
-}
-
-.loginForm {
-  width: 100%;
-  font-family: var(--font-dongle);
-}
-
-.loginForm h1{
-    color: white;
-    font-size: 5rem;
-    text-align: center;
-    margin: 10px auto;
+  .credSection h2 {
+    font-family: var(--font-dongle);
+    font-size: 4rem;
   }
-
-.loginForm input:not([type="checkbox"]) {
-  background: #FFFFFF;
-  padding: 0.8rem 3rem;
-  margin: 15px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  font-size: 1.75rem;
-  font-weight: 500;
-  color: black;
-  box-shadow: none;
-  transition: box-shadow 0.2s ease-in-out;
-}
-
-.loginForm input:not([type="checkbox"]):focus {
-  box-shadow: 0 0 0 3px rgba(78, 56, 239, 0.8);
-}
-
-
-.authIcons {
-  position: absolute;
-  left: 1.5rem;
-  top: 0.125rem;
-  transform: translateY(2.2rem);
-}
-
-.loginForm img {
-  width: 20px;
-  height: 20px;
-  margin-left: 0.5rem;
-}
-
-.remForgor {
-  padding-inline: 20px;
-}
-
-.remForgor input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.remForgor input[type="checkbox"]:hover {
-    transform: scale(1.2);
-}
-
-.remForgor label{
-    font-size: 1.2rem;
-    color: white;
-    padding-left: 10px;
-}
-
-
-.loginForm a.submit-login {
+  
+  .credSection input:not([type="checkbox"]){
     font-family: var(--font-dongle);
     font-size: 2rem;
     text-decoration: none;
-    color: white;
-    background-color: transparent;
-    border: 2px solid white;
-    padding: 16px 100px 14px;
-    margin: 1rem 0;
-    width: 10%;
-    border-radius: 100px;
-    position: relative;
-    overflow: hidden;
+    color: black;
   }
-  
-  .loginForm a.submit-login::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    z-index: -1;
-    transition: background-color 0.4s ease;
+
+  .credSection input:focus{
+    outline: none;
+    box-shadow: none;
   }
-  
-  .loginForm a.submit-login:hover::before {
+
+  .credSection input:hover{
     background-color: white;
   }
 
-  .loginForm .forgot-password, .redirectregister a {
-    font-size: 1.4rem;  
-    text-decoration: underline;
-    color: white; 
-    padding-bottom: 10px;
-    transition: color 0.3s ease, color 0.3s ease;
-
-  }
-  
-  
-  .loginForm .forgot-password:hover, .redirectregister a:hover, .loginForm .submit-login:hover {
-    color: #646cff; 
-  }
-  
-  .loginForm .redirectregister span{
-    color: white;
-    font-size: 1.3rem;
-  }
-
-
-.register-form{
-
-    color: white;
+  .credSection p {
     font-family: var(--font-dongle);
-
-}
-
- .register-form h1{
-    color: white;
-    font-family: var(--font-dongle);
-    font-size: 5rem;
-    text-align: center;
-    margin: 10px auto;
-}
-
-.register-form input{
-    background: #FFFFFF;
-    padding: 0.8rem 1rem 0.8rem 3rem;
-    margin: 15px;
-    border-radius: 10px;
-    border: none;
-    font-size: 1.75rem;
-    font-weight: 500;
-    color: black;
-}
-
-.register-form button{
-  background: rgba(255, 255, 255, 0.5);
-  padding: 16px 100px 14px;
-  margin: 1rem 0; 
-  border-radius: 100px;
-  border: 2px solid white;
-  font-size: 2rem;
-  color: white;
-  transition: background 0.3s ease, color 0.3s ease;
-  background-color: transparent;
-
-}
-
-.register-form button:hover{
-    background: rgba(255, 255, 255, 0.8);
-    color: #646cff;
-    border-color: white;
-}
-
-.register-form span{
-    font-size: 1.3rem;
-}
-
-.register-form a{
-    text-decoration: underline;
-    color: white;
-    transition: color 0.3s ease;
-}
-
+    margin-top: 4px;
+    font-size: 1.5rem;
+  }
 
 /* Website-secondcontent */
 
