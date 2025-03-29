@@ -1,10 +1,10 @@
-
 // Components
 import { useState } from "react";
 import eyeOpened from "../assets/images/icons/showpassword.png";
 import eyeClosed from "../assets/images/icons/hidepassword.png";
 import VideoComponent from "../components/VideoComponent";
 import FlipCard from "../components/FlipCard";
+import useParallax from "./useParallax";
 // Assets
 import emailIcon from "../assets/images/icons/email.png";
 import hidepassIcon from "../assets/images/icons/hidepassword.png";
@@ -33,14 +33,17 @@ function Homecontent({regToggleValue}) {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [isLogin, setIsLogin] = useState(false);
-    
+    const sectionsRef = useParallax();
+
     return (
         <div>
 
         <VideoComponent/>
 
         {/* Section 1 */}
-        <div className="section-1 flex-wrap flex flex-col justify-center h-[calc(100vh-6rem)] -mt-12 overflow-hidden" id="sectionBox"> 
+        <section 
+        ref={(el) => (sectionsRef.current[1] = el)}
+        className="parallax-section section-1 flex-wrap flex flex-col justify-center h-[calc(100vh-6rem)] mt-15 overflow-hidden" id="sectionBox"> 
             <div className={`flex relative items-center justify-evenly w-full -righto-[48vw] ${regToggleValue ? "translate-x-[0vw]" : "translate-x-[50vw]"} transition-all duration-700`}> 
                 
                 <div id="welcomeSection" className="softwaredl bg-black/75 backdrop-blur-md border-transparent border-2 rounded-2xl py-12 px-24 h-fit">
@@ -69,7 +72,7 @@ function Homecontent({regToggleValue}) {
                                     <input type="password" placeholder="Password" className="w-full pr-4"/>
                                 </inputCloset>
                                 <div className="flex flex-row justify-between">
-                                    <div className="flex ">
+                                    <div className="flex">
                                         <input type="checkbox" className="mr-2"/>
                                         <p>Remember me</p>
                                     </div>
@@ -124,10 +127,14 @@ function Homecontent({regToggleValue}) {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         {/* Section 2 */}
-        <section className="second-section relative h-[120vh] w-full">
+        
+        <section
+          ref={(el) => (sectionsRef.current[2] = el)}
+          className="parallax-section second-section h-[120vh] w-full"
+        >
             <div className="product__wrapper grid grid-cols-[1fr_1.4fr]">
                 <div className="product-introduction">
                     <h1>A Dream Tracking software</h1>
@@ -181,7 +188,11 @@ function Homecontent({regToggleValue}) {
 
         </section>
 
-        <section className="third-section relative h-[120vh] w-full">
+        {/* Section 3 */}
+
+        <section 
+        ref={(el) => (sectionsRef.current[3] = el)}
+        className="parallax-section third-section relative h-[120vh] w-full">
             <div className="waitlist__wrapper grid grid-cols-[1fr_1.4fr]">
                 <div className="waitlist-card bg-black/40 backdrop-blur-lg rounded-lg shadow-lg">
                     <h2>Forge Your Destinity</h2>
@@ -251,7 +262,12 @@ function Homecontent({regToggleValue}) {
                 </div>
             </div>
         </section>
-        <section className="userprofile-section relative h-[120vh] w-full">
+
+        {/* Usert-profile Section */}
+
+        <section 
+        ref={(el) => (sectionsRef.current[0] = el)}
+        className="parallax-section userprofile-section relative h-[120vh] w-full">
             <div className="userprofile__wrapper">
                 <div className="flex relative top-65">
                     <div className="userprofile-sidebar w-1/5">
